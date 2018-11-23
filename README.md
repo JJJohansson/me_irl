@@ -6,8 +6,8 @@ Phase one:
 - save new submissions to sqlite database
 - data saved: weekday, time, upvote amount and submission id (id used as primary key)
 
-Phase two:
+Phase two: (in progress..)
 - update the upvote of every saved submission
 
-Phase three:
+Phase three: (in progress..)
 - check if there are correlations between time/weekday and the amount of upvotes

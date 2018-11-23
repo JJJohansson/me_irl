@@ -28,11 +28,11 @@ def update():
     except Exception as e:
         print(e)
 
-
     try:
         c = conn.execute("SELECT id from me_irl")
         for row in c:
             submission = reddit.submission(row[0])
+            # this is not efficient. find a way to bulk update. otherwise the update takes 1 sec per 1 row. 65 000 seconds of script runtime is not that cool :D
             upvotes = submission.ups
             c = conn.execute('UPDATE me_irl SET upvotes = ? WHERE id= ?', (upvotes, row[0]))
             conn.commit()
@@ -50,7 +50,7 @@ def update():
         save_log(updated_rows, timestamp)
 
 
-# everytime the script is run, log the number of rows inserted and the timestamp
+# everytime the script is run, log the timestamp and the number of rows updated
 def save_log(updated_rows, timestamp):
     save_path = '/home/pi/exec/reddit'
     file_name = os.path.join(save_path, 'log.txt')
