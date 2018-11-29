@@ -3,7 +3,7 @@ Fetching data from [Reddit's](https://www.reddit.com/) [me_irl subreddit](https:
 
 Phase one: (completed)
 - Fetch new submissions every 5 minutes. The script will be set up running on Raspberry Pi 3 Model B+. The script itself will be set to run every 5 minutes with Linux cron job.
-- Save new submissions to sqlite database.
+- Save new submissions to SQLite database.
 - Data saved: weekday, time, upvote amount and submission id (id used as primary key)
 
 Phase two: (in progress..)
