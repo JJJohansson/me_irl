@@ -1,5 +1,5 @@
 # me_irl
-Fetching data from me_irl submissions.
+Fetching data from Reddit's[https://www.reddit.com/] me_irl subreddit[https://www.reddit.com/r/me_irl/] submissions.
 
 Phase one:
 - fetch new submissions every 5 minutes (execute script every 5 minutes with linux cron jobs)
